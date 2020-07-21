@@ -11,6 +11,7 @@ public class ConvertStringToInt {
 			
 			int i = Integer.parseInt(input);
 			System.out.println("Converted string to int:"+i);
+			s1.close();
 		}
 	}
 
