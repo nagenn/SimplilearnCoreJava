@@ -26,7 +26,7 @@ package Collections;
 	    for (String i : cameras) {
 	      System.out.println(i);
 	    }
-	    
+	   
 	    //replace 2nd element
 	    cameras.set(1, "Konica");
 	    System.out.println(cameras);

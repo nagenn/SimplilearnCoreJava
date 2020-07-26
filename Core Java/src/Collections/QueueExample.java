@@ -22,7 +22,7 @@ public class QueueExample {
         cities.add("Singapore");
         cities.add("Nairobi");
         
-        
+        /*CHALLENGE - Use a Comparator to control the type of sorting that happens in the queue */
   
         // Printing the top element of PriorityQueue 
         System.out.println("Top of the list: "+cities.peek()); 

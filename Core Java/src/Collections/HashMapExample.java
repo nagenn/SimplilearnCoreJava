@@ -15,8 +15,13 @@ package Collections;
 	    // Add keys and values (Name, ID)
 	    employees.put("Varun", new Random().nextLong() & Long.MAX_VALUE);
 	    employees.put("Sarah", new Random().nextLong() & Long.MAX_VALUE);
-	    employees.put("Shakir", new Random().nextLong() & Long.MAX_VALUE);
+	    employees.put("Shakir", new Random().nextLong() & Long.MAX_VALUE); 
 
+	    /*employees.put("Varun", new Random().nextLong() );
+	    employees.put("Sarah", new Random().nextLong() );
+	    employees.put("Shakir", new Random().nextLong());*/
+
+	    
 	    System.out.println("Varun's employee ID is: "+employees.get("Varun"));
 	    
 	    for (String i : employees.keySet()) {
@@ -25,7 +30,7 @@ package Collections;
 	    
 	    //remove all items using clear
 	    employees.clear();
-	    
+	   
 	    
 	    System.out.println("After clearing, the hashmap's size is: "+employees.size());
 	  }
