@@ -33,4 +33,5 @@ public class TrainPassenger {
 	public long getPnr() {
 		return pnr;
 	}
+	
 }

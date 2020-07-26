@@ -1,17 +1,23 @@
 package Inheritance;
 
+//child class 1
 public class HomeLoan extends LoanProcess{
 	private String postalcode;
 	 
+	//constructor
 	 HomeLoan(String nme, double amount, int tm, String pc){
 		 customername = nme;
 		 loanamount = amount;
 		 term = tm;
 		 postalcode = pc;
 	 }
+	 
+	 //overriding
 	 public String getCustomername() {
 		 return "Customer "+customername+" looking to buy a property in area :"+ postalcode;
 	 }
+	 
+	 //overloading
 	 public double calculateEMI(String scheme) {
 		 if (scheme == "fixed") {
 			 System.out.println("Calculating fixed interest EMI");

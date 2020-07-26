@@ -9,7 +9,7 @@ public class CreateNewLoan {
 		 if (opt.matches("1")) {
 			 HomeLoan h1 = new HomeLoan("Jay Chand",200000, 120, "345609" );
 			 System.out.println(h1.getCustomername());
-			System.out.println("EMI is calculated to be:"+h1.calculateEMI("floating"));
+			System.out.println("EMI is calculated to be:"+h1.calculateEMI("fixed"));
 		 }
 		 else {
 		CarLoan l1 = new CarLoan("Henry Ford", 30000, 60, "Benz" );
