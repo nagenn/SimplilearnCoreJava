@@ -13,6 +13,7 @@ public class CreatePassenger {
 				System.out.println("Enter passenger gender (M/F):");
 				String gen = s1.nextLine();
 				TrainPassenger tp1 = new TrainPassenger(name, age, (char)(gen.charAt(0)));
+				//TrainPassenger tp1 =  new TrainPassenger(33);
 				System.out.println("A new passenger was created");
 				System.out.println(" Name:"+ tp1.getName());
 				System.out.println(" Age:"+ tp1.getAge());

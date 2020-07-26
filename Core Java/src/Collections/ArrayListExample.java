@@ -6,7 +6,7 @@ package Collections;
 	
 	public class ArrayListExample {
 	  public static void main(String[] args) {
-	    //ArrayList<String> cars = new ArrayList<String>();
+	    
 		  ArrayList<String> cameras = new ArrayList<String>();
 	    cameras.add("Nikon");
 	    cameras.add("Panasonic");

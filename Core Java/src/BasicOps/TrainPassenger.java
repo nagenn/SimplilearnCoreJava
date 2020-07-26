@@ -8,6 +8,7 @@ public class TrainPassenger {
 	private int age;
 	private char gender;
 	
+	
 	//constructor - ok to leave it with default access
 	TrainPassenger(String varnme, int varage, char vargen) {
 		pnr =  new Random().nextLong();
@@ -15,6 +16,11 @@ public class TrainPassenger {
 		age = varage;
 		gender  = vargen;
 	}
+	//It is ok to have multiple constructors for a class
+	TrainPassenger(int varage){
+		age=varage;
+	}
+	
 	public String getName() {
 		return name;
 	}

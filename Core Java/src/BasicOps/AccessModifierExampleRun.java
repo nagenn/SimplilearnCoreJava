@@ -11,8 +11,9 @@ public class AccessModifierExampleRun {
 		// create a new instance of ExampleA
 		AccessModifierExampleA e1 = new AccessModifierExampleA();
 		e1.pbl = 'x';
+		
 		/*e1.lang="python"; 
-		 * What happens if I uncomment the above line?
+		 What happens if I uncomment the above line?
 		 */
 		System.out.println("The current value of pbl is:"+e1.pbl);
 		e1.methodPublic(10);

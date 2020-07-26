@@ -22,7 +22,7 @@ public class TypeCastingExample {
 		System.out.println("Double:"+d);
 		System.out.println("Float:"+f);
 		System.out.println("Long:"+l);
-		System.out.println("Float:"+i);
+		System.out.println("Integer:"+i);
 		
 		
 	}

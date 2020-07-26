@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 
 public class ThrowThrowsExample {
-		public void checkValidity(int age) throws ArithmeticException {
+		public void checkValidity(int age) throws ArithmeticException { //this method can throw an ArithmeticException
 			if (age < 21) {
-				throw new ArithmeticException("You are not eligible to sign up");
+				throw new ArithmeticException("You are not eligible to sign up"); 
+				//throw an AE when a certain condition is not met. Notice the custom message
 			}
 			else {
 				System.out.println("Congrats! Your account was created successfully!");
@@ -29,7 +30,7 @@ public class ThrowThrowsExample {
 					finally {
 					System.out.println("Do you want to continue? (y/n):");
 					response  = s1.nextLine().charAt(0);
-					}
+					}//notice the use of the finally block
 					}
 				while (response=='y');
 				s1.close();

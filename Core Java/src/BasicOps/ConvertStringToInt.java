@@ -15,3 +15,5 @@ public class ConvertStringToInt {
 		}
 	}
 
+/*Exercise - write a similar program as above - but instead of an integer, use float
+and accept values with decimal points such as 100.01 */
