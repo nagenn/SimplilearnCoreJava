@@ -34,8 +34,9 @@ package Collections;
 	        //should be sorted order – TreeSet stores element in sorted order
 	        System.out.println("Order of objects in TreeSet :" + gadgetCart);
 	        
-	        System.out.println("gadgetBuzz contains smartwatch: "+gadgetCart.contains("smartwatch"));
+	        System.out.println("gadgetCart contains smartwatch: "+gadgetCart.contains("smartwatch"));
 	        System.out.println("gadgetMarket contains Fitbit: " + gadgetMarket.contains("Fitbit"));
+	        
 	    }
 	    
 	}
