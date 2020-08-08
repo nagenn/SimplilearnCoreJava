@@ -7,6 +7,7 @@ import java.net.URLClassLoader;
 
 public class DBOperations {
 	private static final String db = "jdbc:mysql://localhost:3306/coolthings";
+	private static final String dbserver = "jdbc:mysql://localhost:3306";
 	private static final String user = "root";
 	private static final String pwd = "root";
 	
@@ -33,8 +34,12 @@ public class DBOperations {
 		System.out.println("1. Retrieve data");
 		System.out.println("2.Insert a new record");
 		System.out.println("3.Update a record");
+		System.out.println("4.Create a database");
+		System.out.println("5.Drop the database created");
+		
 		
 		int choice = s1.nextInt();
+		s1.nextLine();
 		
 		switch(choice) {
 		case 1: d1.retrieveData();
@@ -44,6 +49,16 @@ public class DBOperations {
 		break;
 		
 		case 3: d1.updateRecord();
+		break;
+		
+		case 4:
+			System.out.println("Name of the database you want to create:");
+			d1.createDb(s1.nextLine());
+			break;
+			
+		case 5:
+			System.out.println("Name of the database you want to delete:");
+			d1.deleteDb(s1.nextLine());
 		}
 		s1.close();
 	}
@@ -66,6 +81,8 @@ public class DBOperations {
 				System.out.println("");
 				System.out.printf("Car Registration: %s, Car Model: %s, Car Color: %s, Kms run: %d", rs.getString("car_regn"), rs.getString("car_model"), rs.getString("car_color"), rs.getInt("car_mileage"));
 			}
+			
+			
 			}
 		catch (SQLException e1) {
 			e1.printStackTrace();
@@ -136,7 +153,9 @@ public class DBOperations {
 			}
 	}
 	
-	}public void updateRecord() {
+	}
+	
+	public void updateRecord() {
 		
 		//Prepared statement
 		String query3 = "Update cars_tbl \n"+
@@ -184,7 +203,84 @@ public class DBOperations {
 	
 	}
 	
+public void createDb(String dbname) {
+		
+		//Prepared statement
+		String query4 = "CREATE DATABASE IF NOT EXISTS "+ dbname;
+		
+		Scanner s4 = new Scanner(System.in);
+		
+		try {
+			try {
+				Class.forName("com.mysql.cj.jdbc.Driver");
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+			
+			con=DriverManager.getConnection(dbserver, user, pwd);
+			
+			pstmt = con.prepareStatement(query4);
+			
+			
+			pstmt.executeUpdate();
+			System.out.println("Successfully created the database");
+			
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		finally {
+			try {
+			con.close();
+			pstmt.close();
+			s4.close();
+			}
+			catch (Exception e2) {
+				e2.printStackTrace();
+			}
+	}
 	
+	}
+	
+public void deleteDb(String dbname) {
+	
+	//Prepared statement
+	String query5 = "DROP DATABASE "+ dbname;
+	
+	Scanner s5 = new Scanner(System.in);
+	
+	try {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		con=DriverManager.getConnection(dbserver, user, pwd);
+		
+		pstmt = con.prepareStatement(query5);
+		
+		
+		pstmt.executeUpdate();
+		System.out.println("Successfully deleted the database");
+		
+	} catch (SQLException e1) {
+		e1.printStackTrace();
+	}
+	finally {
+		try {
+		con.close();
+		pstmt.close();
+		s5.close();
+		}
+		catch (Exception e2) {
+			e2.printStackTrace();
+		}
+}
+
+}
+
 }
 
 	

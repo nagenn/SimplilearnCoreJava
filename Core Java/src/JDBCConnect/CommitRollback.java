@@ -39,7 +39,7 @@ public class CommitRollback {
 		
 		String query2 = "Insert into coolthings.cars_tbl (car_regn, car_model, car_color, car_mileage) values (?,?,?,?)";
 		
-		Scanner s2 = new Scanner(System.in);
+		Scanner s2 = new Scanner(System.in	);
 		
 		char ans = ' ' ;
 		
