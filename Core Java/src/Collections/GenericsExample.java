@@ -6,7 +6,7 @@ public class GenericsExample {
 		   public static < T > void listArray( T[] argArray ) {
 		      // List array elements
 		      for(T element : argArray) {
-		         System.out.print(element);
+		         System.out.print(element + " ");
 		      }
 		      System.out.println();
 		   }
